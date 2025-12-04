@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Holidays!</title>
+    <link rel="stylesheet" href="https://use.typekit.net/ioo4xhw.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ioo4xhw.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+    
+
+        body {       
+            font-family: "proxima-nova", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            background: #bde1b6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 20px;
+        }
+
+        h1 {
+            color: #ed1c24  ;
+            margin-bottom: 20px;
+            font-size: 2.2em;
+            text-align: center;
+            font-family: "am-novecento", sans-serif; 
+        }
+
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            aspect-ratio: 5/6;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-content {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .gift-view, .reveal-view {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .reveal-view {
+            display: none;
+        }
+
+        .card.revealed .gift-view {
+            display: none;
+        }
+
+        .card.revealed .reveal-view {
+            display: flex;
+        }
+
+        .gift-icon {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #ffffff;
+            font-size: 80px;
+        }
+
+        .gift-label {
+            padding: 20px;
+            text-align: center;
+            background: #bf295b;
+            font-family: "am-novecento", sans-serif; 
+            color: #ffffff;
+            font-size: 1.1em;
+        }
+
+        .photo-container {
+            flex: 1;
+            overflow: hidden;
+            background: #f0f0f0;
+        }
+
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .message-container {
+            padding: 20px;
+            background: white;
+            color: #5a4a3a;
+            line-height: 1.6;
+            font-size: 0.95em;
+        }
+
+        .gift-icon img {
+            max-width: 60%;
+            max-height: 60%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5em;
+                margin-bottom: 30px;
+            }
+
+            .cards-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <h1>GIFTING YOU 6 PHOTOS I LIKE:</h1>
+    
+    <div class="cards-container">
+        <!-- Card 1 -->
+        <div class="card" onclick="this.classList.toggle('revealed')">
+            <div class="card-content">
+                <div class="gift-view">
+                    <div class="gift-icon">
+                        <img src="web images-10.png" alt="Gift">
+                    </div>
+                    <div class="gift-label">CLICK TO OPEN</div>
+                </div>
+                <div class="reveal-view">
+                    <div class="photo-container">
+                        <img src="miles1.jpeg" alt="Memory 1">
+                    </div>
+                    <div class="message-container">
+                        A cursed experience that will go down in history
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card" onclick="this.classList.toggle('revealed')">
+            <div class="card-content">
+                <div class="gift-view">
+                    <div class="gift-icon">
+                        <img src="web images-15.png" alt="Gift">
+                    </div>
+                    <div class="gift-label">CLICK TO OPEN</div>
+                </div>
+                <div class="reveal-view">
+                    <div class="photo-container">
+                        <img src="miles2.jpeg" alt="Memory 2">
+                    </div>
+                    <div class="message-container">
+                        This photo might get you cancelled one day if you run for office
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card" onclick="this.classList.toggle('revealed')">
+            <div class="card-content">
+                <div class="gift-view">
+                    <div class="gift-icon">
+                        <img src="web images-14.png" alt="Gift">
+                    </div>
+                    <div class="gift-label">CLICK TO OPEN</div>
+                </div>
+                <div class="reveal-view">
+                    <div class="photo-container">
+                        <img src="miles3.jpg" alt="Memory 3">
+                    </div>
+                    <div class="message-container">
+                        My 2 favorite boys and miles
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card" onclick="this.classList.toggle('revealed')">
+            <div class="card-content">
+                <div class="gift-view">
+                    <div class="gift-icon">
+                        <img src="web images-11.png" alt="Gift">
+                    </div>
+                    <div class="gift-label">CLICK TO OPEN</div>
+                </div>
+                <div class="reveal-view">
+                    <div class="photo-container">
+                        <img src="miles4.png" alt="Memory 4">
+                    </div>
+                    <div class="message-container">
+                        Creature emerging from its swamp
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card" onclick="this.classList.toggle('revealed')">
+            <div class="card-content">
+                <div class="gift-view">
+                    <div class="gift-icon">
+                        <img src="web images-12.png" alt="Gift">
+                    </div>
+                    <div class="gift-label">CLICK TO OPEN</div>
+                </div>
+                <div class="reveal-view">
+                    <div class="photo-container">
+                        <img src="miles5.jpeg" alt="Memory 5">
+                    </div>
+                    <div class="message-container">
+                        The way he looks at you
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card" onclick="this.classList.toggle('revealed')">
+            <div class="card-content">
+                <div class="gift-view">
+                    <div class="gift-icon">
+                        <img src="web images-13.png" alt="Gift">
+                    </div>
+                    <div class="gift-label">CLICK TO OPEN</div>
+                </div>
+                <div class="reveal-view">
+                    <div class="photo-container">
+                        <img src="miles6.jpeg" alt="Memory 5">
+                    </div>
+                    <div class="message-container">
+                        Never forget coming home and there you are all tucked in
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
